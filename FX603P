@@ -1,11 +1,5 @@
-13 = KORDINIT T/B
-12 = PERIMETER
-Sebelum mulakan program ini padamkan semua memori dengan menekan MAC atau SHIFT > 2nd > AC kemudian masukkan kordinit station pertama U/S dan SAVE dalam Memori 11 ( Min11 ) dan kordinit T/B dan SAVE dalam memori 13 ( Min13 ). Selepas itu barulah tekan P1 
-_____________________________________________________________________________________________________
-PROGRAM 7 ( P7 ) : PERLU DIMASUKKAN UNTUK KEGUNAAN SEMUA PROGRAM BERFUNGSI MENGIRA BEARING
-Min19 INT + ( MR19 FRAC X 2 10ᵡ ) Min19 INT ÷ 60 + MR19 FRAC ÷ 36 = Min19
-END OF PROGRAM
-______________________________________________________________________________________________________
-PROGRAM 8 ( P8 ) : PERLU DIMASUKKAN UNTUK KEGUNAAN SEMUA PROGRAM UNTUK FUNGSI 3 DIGIT ANGKA BERNILAI
-FIX3
-END OF PROGRAM
+"COMPS" PAUSE LBL9
+"Brg" HLT GSBP7
+"Jarak" HLT LBL0 Min02 M+12 P→R MR19 = Min05 X�Y GSBP8 Min06 M+03 M+13 MR05 GSBP8 Min06 M+03 M+13 MR05 GSBP8 Min05 M+01 M+11 X MR03 = - ( MR01 X MR06 ) = M-04 MR04 ÷ 2 = Min10 LBL7 MR01 X² + MR03 X² = Min07 X=0 GOTO9 √ ÷ ÷ MR12 = FIX3 Min07 LBL8 MR01 R→P MR03 = MinF X�Y + 180 = Min09 MRF GSBP8 MinF MR02 X≥0 GOTO9 GOTO4 LBL2 MR02 +/- GOTO0 LBL4 GOTO9 LBL1 GSBP7 Min14 "Brg2" HLT
+GSBP7 Min08 MR14 Min19 - MR08 = sin Min14 MRF ÷ MR14 = Min1F MR08 - MR09 = sin X MR1F = ABS GSBP8 Min1F "Dist1=AR1F" HLT
+MR1F GOTO0
