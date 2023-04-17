@@ -1,33 +1,6 @@
-MR02 - MR03 = FIX3
-"RL Point=#m" HLT
-GOTO1
-END OF PROGRAM
-NOTA :
-RL TBM = TINGGI ARAS TBM
-Bacaan TBM = Nilai bacaan setaf atas TBM
-Bacaan Point = Nilai bacaan setaf atas point / STN
-RL Point = Level Point / STN yang dibaca tadi
-__________________________________________________________________________________________________
-PROGRAM 5 ( P5 ) : "TACKY" UNTUK MENGIRA ARAS TINGGI DENGAN TEODOLITE MENGGUNAKAN VERTICAL DAN SLOPE DISTANCE
-MAC "TACKY" PAUSE
-"RL STN" HLT Min00
-"HI" HLT Min01
-"HT" HLT Min02 LBL1
-"Vt" HLT GSBP7 = Min03 - 270= Min03
-"SD" HLT Min04 P→R MR03 = FIX3 "Hz=#m" HLT
-Min05 X�Y = FIX3 "HD=#m" HLT
-Min06 MR00 + MR01+ MR06 - MR02= FIX3 "RL2=#m" HLT
-GOTO1
-END OF PROGRAM
-NOTA :
-RL STN = RL STATION ALAT
-HI = TINGGI ALAT
-HT = TINGGI TARGET
-Vt = VERTICAL
-SD = SLOPE DISTANCE
-Hz = HORIZONTAL DISTANCE
-HD = BEZA TINGGI
-RL2 = RL POINT YANG DIBACA
+13 = KORDINIT T/B
+12 = PERIMETER
+Sebelum mulakan program ini padamkan semua memori dengan menekan MAC atau SHIFT > 2nd > AC kemudian masukkan kordinit station pertama U/S dan SAVE dalam Memori 11 ( Min11 ) dan kordinit T/B dan SAVE dalam memori 13 ( Min13 ). Selepas itu barulah tekan P1 
 _____________________________________________________________________________________________________
 PROGRAM 7 ( P7 ) : PERLU DIMASUKKAN UNTUK KEGUNAAN SEMUA PROGRAM BERFUNGSI MENGIRA BEARING
 Min19 INT + ( MR19 FRAC X 2 10ᵡ ) Min19 INT ÷ 60 + MR19 FRAC ÷ 36 = Min19
